@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container position-fixed">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">Навбар</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">домой</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">ссылка</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ссылка
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-light" href="#">действие</a></li>
+                        <li><a class="dropdown-itemv" href="#">еще одно действие</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-light" href="#">что-нибудь еще здесь</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                    <a class="btn px-5 btn-outline-primary text-light" href="#">скачать</a>
+                    </form>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fliud bg-black vh-100">
+        <div class="container vw-50 vh-100 my-auto bg-dark"></div>
+    </div>
+    <div class="container-fliud bg-dark vh-100"></div>
+
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
