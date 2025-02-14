@@ -2,6 +2,9 @@
     /* font-family: "Jersey 10", serif; */
     /* font-family: "Pixelify Sans", serif; */
     font-family: "DotGothic16", serif;
-    letter-spacing: -9px;
-    font-size: 25px;
+    font-size: 22px;
+}
+.my-container{
+    background-image: url('./images.jpg');
+    background-size: contain;
 }
