@@ -6,17 +6,31 @@
     font-size: 20px;
 }
 .my-container{
-    background-image: url('./images.jpg');
     background-size: contain;
 }
 .my-header{
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    /* background-color: #00000076; */
 }
 .my-center-col{
-    /* width: 500px; height: 700px; */
+    /* background-image: url('../Sprites/sparkle5.png'); */
     background-color: rgb(0, 0, 0);
+    background-image: url('../Sprites/sparkle5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .my-justify-col{
     text-align: justify;
+}
+.my-btn{
+    width: 25%;
+    display: block;
+    background-color: rgb(37, 124, 255);
+    border: 1px solid rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
+.my-btn:hover{
+    width: 27%;
+    border: 2px solid rgb(37, 124, 255);
+    box-shadow: 0 0 10px rgb(37, 124, 255);
+    background-color: rgb(0, 0, 0);
 }
