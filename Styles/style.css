@@ -21,8 +21,11 @@
     background-size: contain;
     background-repeat: no-repeat;
 } */
-.my-justify-text-col{
+.justify-text{
     text-align: justify;
+}
+.text-bottom{
+    /* top: 50vw; */
 }
 /* .my-btn{
     width: 25%;
@@ -45,3 +48,29 @@
     box-shadow: 0 0 1px 2px rgb(37, 124, 255);
     background-color: rgb(0, 0, 0);
 } */
+
+
+.my-second-slide-info-contents{
+    width: 100%;
+    align-items: center;
+}
+.my-info-square{
+    overflow: hidden;
+    @media (max-width: 766px) {
+        font-size: 2.5vw;
+    }
+    @media (max-width: 574px) {
+        font-size: 3vw;
+    }
+    @media (max-width: 395px) {
+        font-size: 3.5vw;
+    }
+}
+.image-section{
+    background-image: url('../moon.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+img{
+    object-fit: cover;
+}
