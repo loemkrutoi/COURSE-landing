@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/style.css">
 </head>
-<body>
+<body onscroll="return AppearAfterFirstSlide()">
+    <div id="invisible" class="go-up-btn position-fixed z-3 invisible">
+        <a class="invisible-a btn text-center text-white btn-outline-primary" href="#">↑</a>
+    </div>
     <div class="my-header container-fluid position-fixed z-3">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -32,7 +35,7 @@
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
-                    <a class="btn px-5 btn-outline-primary text-light d-none d-md-block" href="#">скачать</a>
+                    <a class="btn px-5 btn-outline-primary text-light d-none d-md-block" href="#download">скачать</a>
                     </form>
                 </div>
                 </div>
@@ -46,14 +49,14 @@
     </div>
     <div id="info" class="my-second-slide-info container-fliud bg-black vh-100">
         <div class="my-second-slide-info-contents container h-100 d-flex justify-content-between row m-auto text-light">
-            <div class="col my-info-square col-xl-4 col-12 p-4 text-center">
+            <div id="infoBtn" class="col my-info-square col-xl-4 col-12 p-4 text-center" onclick="return InfoBtn(this)">
                 <p class="font-changing d-none d-md-block">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
                 <p class="font-changing d-block d-md-none">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
             </div>
             <div class="col bg-black col-xl-4 col-12">
                 <img class="img-fluid d-block mx-auto" src="Sprites/hands.png" alt="">
             </div>
-            <div class="col my-info-square col-xl-4 col-12 p-4 text-center">
+            <div id="infoBtnTwo" class="col my-info-square col-xl-4 col-12 p-4 text-center" onclick="return InfoBtn(this)">
                 <p class="font-changing d-none d-md-block">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
                 <p class="font-changing d-block d-md-none">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
             </div>
@@ -84,14 +87,6 @@
                             <img src="Images/Slider2.png" class="vh-100 w-100 d-block" alt="...">
                           </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -101,7 +96,13 @@
             <h1>отзывы</h1>
         </div>
     </div>
+    <div id="download" class="my-fifth-slide container-fluid bg-black vh-100">
+        <div class="container h-100 text-center text-light">
+            <h1>скачать</h1>
+        </div>
+    </div>
 
     <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Bootstrap/js/script.js"></script>
 </body>
 </html>

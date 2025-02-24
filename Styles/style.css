@@ -60,8 +60,12 @@
 }
 .my-info-square{
     border-radius: 5px;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
     overflow: hidden;
+    color: rgba(0, 0, 0, 0);
+    background-image: url('../Sprites/sparkle.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .font-changing{
     @media (max-width: 766px) {
@@ -74,9 +78,11 @@
         font-size: 3.5vw;
     }
 }
-.my-info-square:hover, .my-info-square:active{
-    background-color: rgb(16, 24, 43);
+.my-info-square:hover, .clicked-info{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255, 255);
     border-radius: 10px;
+    background-image: none;
 }
 .image-section{
     background-image: url('../Images/landingPage.jpg');
@@ -85,4 +91,24 @@
 }
 img{
     object-fit: cover;
+}
+.go-up-btn{
+    top: 85vh; left: 5vw;
+}
+.invisible{
+    display: none;
+}
+.invisible-a{
+    font-size: 30px;
+    padding: 10px 22px 10px 19px;
+    border-radius: 100%;
+    animation: GoUpBtnAnimIn 0.5s linear;
+}
+@keyframes GoUpBtnAnimIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 255;
+    }
 }
