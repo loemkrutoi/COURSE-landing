@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body onscroll="return AppearAfterFirstSlide()">
-    <div id="invisible" class="go-up-btn position-fixed z-3 invisible">
-        <a class="invisible-a btn text-center text-white btn-outline-primary" href="#">↑</a>
+    <div id="goUpBtn" class="go-up-btn position-fixed z-3" style="animation: 0s linear 0s 1 normal forwards running GoUpBtnAnimOut;">
+        <a class="go-up-a btn text-center text-white btn-outline-primary" href="#">↑</a>
     </div>
     <div class="my-header container-fluid position-fixed z-3">
         <div class="container">
@@ -43,9 +43,8 @@
         </div>
     </div>
     <div class="my-first-slide container-fliud bg-black vh-100">
-        <div class="image-section vh-100 w-100 d-block m-auto bg-danger"></div>
+        <div class="image-section vh-100 w-100 d-block m-auto"></div>
         <h1 class="d-block text-center text-light w-25 mx-auto position-absolute top-50 start-50 translate-middle">игра</h1>
-        <!-- <a class="my-btn btn btn-outline-primary d-block p-3 text-center rounded text-decoration-none text-light w-25 mx-auto position-absolute top-50 start-50 translate-middle" href="#">скачать</a> -->
     </div>
     <div id="info" class="my-second-slide-info container-fliud bg-black vh-100">
         <div class="my-second-slide-info-contents container h-100 d-flex justify-content-between row m-auto text-light">
@@ -54,7 +53,7 @@
                 <p class="font-changing d-block d-md-none">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
             </div>
             <div class="col bg-black col-xl-4 col-12">
-                <img class="img-fluid d-block mx-auto" src="Sprites/hands.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="moon.jpg" alt="">
             </div>
             <div id="infoBtnTwo" class="col my-info-square col-xl-4 col-12 p-4 text-center" onclick="return InfoBtn(this)">
                 <p class="font-changing d-none d-md-block">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
@@ -99,6 +98,7 @@
     <div id="download" class="my-fifth-slide container-fluid bg-black vh-100">
         <div class="container h-100 text-center text-light">
             <h1>скачать</h1>
+                <a class="btn btn-outline-primary d-block text-center text-decoration-none text-light w-100 h-75 m-auto" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F598134394248886689%2F&psig=AOvVaw2kp5kBWDFZdyAh99Lel1Ln&ust=1740529938377000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjr_rbJ3YsDFQAAAAAdAAAAABAE">скачать</a>
         </div>
     </div>
 

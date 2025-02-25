@@ -2,10 +2,10 @@ function InfoBtn(target){
     target.classList.toggle('clicked-info');
 }
 
-let invisible = document.getElementById('invisible');
+let goUpBtn = document.getElementById('goUpBtn');
 function AppearAfterFirstSlide(){
     if(window.scrollY < 600){
-        invisible.classList.add('invisible');
+        goUpBtn.style.animation = '0.3s linear 1 GoUpBtnAnimOut forwards'
     }
-    else invisible.classList.remove('invisible');
+    else goUpBtn.style.animation = '0.3s linear GoUpBtnAnimIn forwards';
 }
