@@ -1,9 +1,16 @@
+:root{
+    --my-black: rgb(5, 5, 9);
+    --my-blue: #2020d9;
+    --my-blue-highlited: #3a3aff;
+}
 *{
-    /* font-family: "Jersey 10", serif; */
     /* font-family: "Pixelify Sans", serif; */
-    font-family: "DotGothic16", serif;
-    letter-spacing: -5px;
+    font-family: "Mulish", sans-serif;
+    /* letter-spacing: -5px; */
     font-size: 20px;
+}
+body{
+    background-color: var(--my-black);
 }
 img{
     object-fit: cover;
@@ -57,16 +64,22 @@ img{
     background-color: #0b0b22;
 }
 .image-section{
-    background-image: url('../Images/landingPage.jpg');
-    background-size: cover;
+    background-image: url('../Images/hands.png');
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
+    animation: HandAnim 2s forwards ease-in-out;
+}
+.text-first-slide{
+    animation: TextAnim 2s forwards ease-in-out;
 }
 .go-up-btn{
     top: 85vh; left: 5vw;
 }
 .go-up-a{
     font-size: 30px;
-    padding: 10px 22px 10px 19px;
+    /* padding: 10px 20px ; */
+    padding: 5px 20px;
     border-radius: 100%;
 }
 @keyframes GoUpBtnAnimIn{
@@ -83,5 +96,25 @@ img{
     }
     to{
         opacity: 0;
+    }
+}
+@keyframes HandAnim {
+    from{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes TextAnim {
+    from{
+        opacity: 0;
+        /* transform: translateY(-200px); */
+    }
+    to{
+        opacity: 1;
+        /* transform: translateY(0px); */
     }
 }
