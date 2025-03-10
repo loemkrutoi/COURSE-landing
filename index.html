@@ -25,13 +25,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#info">об игре</a>
+                        <a class="nav-link" href="#info">об игре</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#slider">слайдер</a>
+                        <a class="nav-link" href="#slider">слайдер</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#reviews">отзывы</a>
+                        <a class="nav-link" href="#reviews">отзывы</a>
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -43,8 +43,8 @@
         </div>
     </div>
     <div class="my-first-slide container-fliud vh-100">
-        <div class="image-section vh-100 w-100 d-block m-auto"></div>
-        <h1 class="text-first-slide d-block text-center text-light w-25 mx-auto position-absolute top-50 start-50 translate-middle">игра</h1>
+        <div id="firstSlide" class="image-section vh-100 w-100 d-block m-auto"></div>
+        <h1 id="firstSlideText" class="text-first-slide d-block text-center w-100 mx-auto position-absolute top-50 start-50 translate-middle">название</h1>
     </div>
     <div id="info" class="my-second-slide-info container-fliud vh-100">
         <div class="my-second-slide-info-contents container h-100 d-flex justify-content-between row m-auto text-light">
@@ -92,7 +92,54 @@
     </div>
     <div id="reviews" class="my-fourth-slide container-fluid bg-black vh-100">
         <div class="container bg-dark h-100 text-center text-light">
-            <h1>отзывы</h1>
+            <div class="reviews-container container bg-black d-flex w-100 h-100 m-auto row position-relative">
+                <h1 class="custom-top-review position-absolute d-none d-xl-block">отзывы</h1>
+                <div class="review p-0 col container col-12 m-auto position-relative">
+                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                        <div class="pfp bg-primary"></div>
+                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="gradient-review position-absolute"></div>
+                        <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                            -The Earthmover upon spotting a GoPro™ with wings and four coins
+                            "AAAAAAaaaAAAAA"
+
+                            -The Earthmover upon spotting a GoPro™ with wings and four coins
+                            "AAAAAAaaaAAAAA"
+
+                            -The Earthmover upon spotting a GoPro™ with wings and four coins
+                            "AAAAAAaaaAAAAA"
+
+                            -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                    </div>
+                </div>
+                <div class="review p-0 col container col-12 m-auto position-relative">
+                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                        <div class="pfp bg-primary"></div>
+                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="gradient-review position-absolute"></div>
+                        <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
+                        </p>
+                    </div>
+                </div>
+                <div class="review p-0 col container col-12 m-auto position-relative">
+                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                        <div class="pfp bg-primary"></div>
+                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="gradient-review position-absolute"></div>
+                        <p class="justify-text p-3">
+                            A massive quadrupedal machine made of dark metal, with city lights abound its torso and neck along with a thin rod of mass destruction. Said neck resembles a spine to better allow it to bend and fire.
+                            Internally, it has a massive hollow chamber lined with flesh and filled with boiling blood to purge intruders with several Idols guarding the path up the neck, which contains numerous hot pipes that burn V1, and winds to the head chamber that contains the brain.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="download" class="my-fifth-slide container-fluid bg-black vh-100">
