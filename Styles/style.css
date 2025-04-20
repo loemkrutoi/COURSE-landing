@@ -1,18 +1,110 @@
 :root{
-    --my-black: rgb(5, 5, 9);
+    --my-black: #050509;
+    --my-black-lighter: #0e0e18;
+    --my-gray: #31313c;
     --my-blue: #2020d9;
-    --my-white: #d6d6e3;
+    --my-white: #bbbbc7;
     --my-blue-highlited: #3a3aff;
 }
 *{
-    font-family: "Mulish", sans-serif;
+    font-family: "Jura", sans-serif;
     font-size: 20px;
+}
+h1,h2{
+    font-family: "Tektur", sans-serif;
+}
+html{
+    scrollbar-color: var(--my-black) var(--my-black-lighter);
+    overflow-x: hidden;
 }
 body{
     background-color: var(--my-black);
+    overflow-x: hidden;
 }
 img{
     object-fit: cover;
+}
+.my-first-slide{
+    overflow-x: hidden;
+}
+.parallax {
+    background-color: rgb(38, 37, 63);
+    background: linear-gradient(180deg,rgb(38, 37, 63) 90%, var(--my-black) 90%);
+    perspective: 1px;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.layer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    image-rendering: pixelated;
+}
+.layer-front {
+    height: auto;
+    transform: translateZ(0.15px) scale(3) translateY(100px);
+    z-index: 5;
+}
+.layer-middle {
+    transform: translateZ(0px) scale(3.5) translateY(120px);
+    z-index: 4;
+    height: auto;
+}
+.layer-back {
+    transform: translateZ(-0.15px) scale(4) translateY(125px);
+    z-index: 2;
+    height: auto;
+}
+.layer-farforik{
+    transform: translateZ(-0.1px) scale(3.5) translateY(25px) translateX(55.5vw);
+    background-image: url('../Images/farforikMenu1.png');
+    background-repeat: no-repeat;
+    z-index: 3;
+    animation: farforikSprite 3s linear infinite;
+    height: 220px;
+    @media (max-width: 1372px) {
+        transform: translateZ(-0.1px) scale(3.5) translateY(30px) translateX(55.5vw);
+    }
+    @media (max-width: 1206px) {
+        transform: translateZ(-0.1px) scale(3.5) translateY(40px) translateX(55.5vw);
+    }
+}
+@keyframes farforikSprite {
+  0%{
+    background-image: url('../Images/farforikMenu1.png');
+  }
+  32%{
+    background-image: url('../Images/farforikMenu1.png');
+  }
+  33%{
+    background-image: url('../Images/farforikMenu2.png');
+  }
+  65%{
+    background-image: url('../Images/farforikMenu2.png');
+  }
+  66%{
+    background-image: url('../Images/farforikMenu3.png');
+  }
+  99%{
+    background-image: url('../Images/farforikMenu3.png');
+  }
+  100%{
+    background-image: url('../Images/farforikMenu1.png');
+  }
+}
+.back-ground{
+    background-image: url('../Images/lastMenu1.png');
+    background-repeat: no-repeat;
+}
+.middle-ground{
+    background-image: url('../Images/1secondMenu1.png');
+    background-repeat: no-repeat;
+}
+.back-ground{
+    background-image: url('../Images/frontMenu1.png');
+    background-repeat: no-repeat;
 }
 .justify-text{
     text-align: justify;
@@ -37,21 +129,22 @@ img{
     }
 }
 .my-second-slide-info-contents{
-    width: 100%;
+    width: 100%; height: 100%;
     align-items: center;
+    justify-content: center;
+    @media (max-width: 520px) {
+        flex-direction: column;
+        height: 80%;
+    }
 }
 .my-info-square{
-    border-radius: 5px;
-    transition-duration: 0.4s;
-    overflow: hidden;
-    color: rgba(0, 0, 0, 0);
-    background-image: url('../Sprites/sparkle.gif');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
+    width: 23vh; height: 23vh;
+    @media (max-width: 768px) {
+        width: 20vh; height: 20vh;
+    }
 }
 .font-changing{
-    @media (max-width: 766px) {
+    @media (max-width: 768px) {
         font-size: 2.5vw;
     }
     @media (max-width: 574px) {
@@ -62,17 +155,41 @@ img{
     }
 }
 .my-info-square:hover, .clicked-info{
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255, 255);
-    border-radius: 10px;
-    background-image: none;
-    background-color: #0b0b22;
+    cursor: pointer;
+}
+.toModal{
+    background-size: contain;
+    image-rendering: pixelated;
+    box-sizing: border-box;
+    transition-duration: 0.2s;
+    background-repeat: no-repeat;
+}
+.toModal:hover{
+    border: 1px solid var(--my-blue);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+.toModal:nth-child(1){
+    background-image: url('../Images/AboutCharacters/gzhechka.png');
+}
+.toModal:nth-child(1):hover{
+    background-image: url('../Images/AboutCharacters/gzhechkaHovered.png');
+}
+.toModal:nth-child(2){
+    background-image: url('../Images/AboutCharacters/farfor.png');
+}
+
+.toModal:nth-child(3){
+    background-image: url('../Images/AboutCharacters/janna.png');
+}
+.toModal:nth-child(3):hover{
+    background-image: url('../Images/AboutCharacters/jannaHovered.png');
 }
 .image-section{
     background-image: url('../Images/hands.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 .text-first-slide{
     color: var(--my-white);
@@ -96,38 +213,106 @@ img{
 }
 .review{
     border: 1px solid var(--my-blue);
-    border-radius: 10px;
-    transition-duration: 0.5s;
-    overflow: hidden;
+    /* border-radius: 10px; */
+    transition-duration: .5s;
+    overflow: scroll;
+    scrollbar-width: none;
     width: 40vh; height: 35vh;
     @media (max-width: 1200px) {
         width: 32vh; height: 50vh;
     }
     @media (max-width: 992px) {
-        width: 60vh; height: 25vh;
+        width: 60vh; height: 40vh;
     }
 }
 .review:hover{
     height: 60vh;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-shadow: var(--my-blue-highlited) 0 0 20px -3px;
     background-color: var(--my-blue);
+    /* transform-origin: center; */
+    /* transform: scale(2); */
 }
 .pfp{
-    width: 8vh; height: 8vh;
+    width: 7vh; height: 7vh;
     border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 17px;
+    @media (max-width: 456px) {
+        margin-right: 20px;
+        width: 60px !important;
+    }
+}
+.pfp1{
+    background-image: url('../Images/pfp1.jpg');
+}
+.pfp2{
+    background-image: url('../Images/pfp2.png');
+}
+.pfp3{
+    background-image: url('../Images/pfp3.png');
+}
+.pfp4{
+    background-image: url('../Images/car.jpg');
 }
 .nickname{
     align-content: baseline;
+}
+.nickname>p{
+    margin-bottom: 0;
+}
+.rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.pfp-right-side{
+    width: 240px;
+}
+.date-text{
+    font-size: 15px;
+    opacity: 0.5;
 }
 .gradient-review{
     transition-duration: 0.5s;
     width: 100%; height: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, var(--my-black) 40%,  rgba(255, 0, 0, 0) 90%);
+    background: linear-gradient(0deg, var(--my-black) 5%,  rgba(255, 0, 0, 0) 90%);
 }
 .gradient-review:hover{
     opacity: 0;
+}
+.my-fourth-slide-reviews{
+    animation: ReviewsAnim 30s 0s infinite linear;
+}
+.my-fourth-slide-reviews:hover{
+    animation-play-state: paused;
+}
+.like, .likeFilled{
+    width: 70px; height: 30px;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-position: 0% 55%;
+    background-size: 19px;
+}
+.like{
+    background-image: url('../Images/heart.png');
+}
+.likeFilled{
+    background-image: url('../Images/heart-filled.png');
+}
+.goDown{
+    top: 20px;
+}
+@keyframes ReviewsAnim {
+    from{
+        transform: translateX(-312px);
+    }
+    to{
+        transform: translateX(-3700px);
+    }
 }
 @keyframes GoUpBtnAnimIn{
     from{
@@ -183,4 +368,240 @@ img{
     to{
         opacity: 0;
     }
+}
+
+/*SHARDS*/
+
+.carousel-container{
+    width: 100%; height: auto;
+}
+.carousel-element{
+    flex: 1 1 15%;
+    height: 60vh;
+    transition-duration: .5s;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    opacity: 0;
+}
+.carousel-normal{
+    border: 1px solid var(--my-blue);
+}
+.carousel-normal:hover{
+    box-shadow: var(--my-blue-highlited) 0 0 20px -3px;
+    background-color: var(--my-blue);
+    color: var(--my-white);
+    transform: translateY(-20px);
+    flex-basis: 30vh;
+    /* overflow: visible; */
+}
+.carousel-element-center{
+    background-image: url('../Images/falling.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+}
+.no-transform{
+    transform: skewY(-20deg);
+}
+.no-transform-reverse{
+    transform: skewY(20deg);
+}
+.appearAnim{
+    animation: appearAnim 1s forwards ease-in-out;
+}
+.appearAnimRev{
+    animation: appearAnimRev 1s forwards ease-in-out;
+}
+.appearAnimSkew{
+    animation: appearAnimSkew 1s 0.5s forwards ease-in-out;
+}
+.appearAnimSkewRev{
+    animation: appearAnimSkewRev 1s 0.5s forwards ease-in-out;
+}
+.appearAnimRect{
+    width: 10vh;
+    height: 40vh; 
+    animation: appearAnimRect 1.5s 1s forwards ease-in-out;
+}
+.opacity-down{
+    opacity: 0;
+}
+@keyframes appearAnim {
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) skewY(20deg);
+        opacity: 1;
+    }
+}
+@keyframes appearAnimRect {
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(20px) rotateZ(5deg);
+        opacity: 1;
+    }
+}
+@keyframes appearAnimRev {
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) skewY(-20deg);
+        opacity: 1;
+    }
+}
+@keyframes appearAnimSkew {
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px) skewY(20deg);
+        opacity: 1;
+    }
+}
+@keyframes appearAnimSkewRev {
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px) skewY(-20deg);
+        opacity: 1;
+    }
+}
+
+.download-col-top{
+    height: 10vw;
+}
+.download-col-info{
+    height: 70vh;
+}
+.to-download{
+    width: 40vh;
+    padding-top: 20px; padding-bottom: 20px;
+}
+.to-download-smaller{
+    width: 25vh;
+    padding-top: 10px; padding-bottom: 10px;
+}
+.to-download, .to-download-smaller{
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--my-blue);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.to-download-smaller::before{
+    content: "скачать";
+    padding-top: 10px; padding-bottom: 10px;
+}
+.to-download::before{
+    content: "СКАЧАТЬ";
+    padding-top: 20px; padding-bottom: 20px;
+}
+.to-download::before, .to-download-smaller::before{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--my-blue-highlited);
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease-in-out;
+}
+.to-download:hover::before, .to-download-smaller:hover::before{
+    clip-path: inset(0 0 0 0);
+}
+.wassup{
+    width: 70vh; height: 70vh;
+    background-image: url('../wassup.png');
+    background-size: cover;
+}
+
+/*MODAL*/
+
+.modal-bg-visible{
+    /* transform: scaleY(1); */
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition-duration: .3s;
+    z-index: 98;
+}
+.modal-body{
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition-duration: .15s;
+}
+.modal-1{
+    background-image: url('../Images/AboutCharacters/gzhechkaBG1.png');
+}
+.modal-2{
+    background-image: url('../Images/AboutCharacters/farforBG1.png');
+}
+.modal-3{
+    background-image: url('../Images/AboutCharacters/jannaBG1.png');
+}
+.modal-window{
+    top: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 800px; height: 500px;
+    transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
+    border: 1px solid var(--my-blue);
+    box-shadow: var(--my-blue-highlited) 0 0 20px -3px;
+    image-rendering: pixelated;
+}
+.modal-top{
+    display: flex;
+    justify-content: end;
+}
+.modal-middle{
+    width: 100%; height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.modal-character-preview{
+    height: 90%; width: 40%;
+}
+.modal-character-description{
+    height: 90%; width: 50%;
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+}
+.modal-bottom{
+    width: 100%;
+    color: var(--my-white);
+}
+.modal-active{
+    visibility: visible;
+    transform: scale(1);
+}
+.modal-inactive{
+    visibility: hidden;
+    transform: scaleY(0) skew(-10deg);
+}
+.modal-active .modal-window{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.modal-close-btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--my-white);
+    font-size: 30px;
+    margin-right: 10px;
 }

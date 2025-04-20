@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <title>DUMMY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="Styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 </head>
 <body onscroll="return AppearAfterFirstSlide()">
     <div id="goUpBtn" class="go-up-btn position-fixed z-3" style="animation: 0s linear 0s 1 normal forwards running GoUpBtnAnimOut;">
-        <a class="go-up-a btn text-center text-white btn-outline-primary" href="#">↑</a>
+        <a class="go-up-a btn text-center text-white btn-outline-primary" href="#top">↑</a>
     </div>
     <div class="my-header container-fluid position-fixed z-3">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                <a class="navbar-brand text-light" href="#">логотип</a>
+                <a class="navbar-brand text-light" href="#top">логотип</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,6 +30,9 @@
                         <a class="nav-link" href="#info">об игре</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#characters">персонажи</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#slider">слайдер</a>
                     </li>
                     <li class="nav-item">
@@ -35,35 +40,69 @@
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
-                    <a class="btn px-5 btn-outline-primary text-light d-none d-md-block" href="#download">скачать</a>
+                        <a class="to-download-smaller text-light text-decoration-none text-left" href="#download">скачать</a>
                     </form>
                 </div>
                 </div>
             </nav>
         </div>
     </div>
-    <div class="my-first-slide container-fliud vh-100">
-        <div id="firstSlide" class="image-section vh-100 w-100 d-block m-auto"></div>
-        <h1 id="firstSlideText" class="text-first-slide d-block text-center w-100 mx-auto position-absolute top-50 start-50 translate-middle">название</h1>
+    <div class="my-first-slide container-fliud vh-100 w-100">
+        <div class="parallax" id="top">
+            <div class="layer layer-back">
+              <img src="Images/lastMenu1.png" alt="Image 3">
+            </div>
+            <div class="layer layer-middle">
+              <img src="Images/1secondMenu1.png" alt="Image 2">
+            </div>
+            <div class="layer layer-farforik">
+            </div>
+            <div class="layer layer-front">
+              <img src="Images/frontMenu2.png" alt="Image 1">
+            </div>
+          </div>
     </div>
-    <div id="info" class="my-second-slide-info container-fliud vh-100">
-        <div class="my-second-slide-info-contents container h-100 d-flex justify-content-between row m-auto text-light">
-            <div id="infoBtn" class="col my-info-square col-xl-4 col-12 p-4 text-center" onclick="return InfoBtn(this)">
-                <p class="font-changing d-none d-md-block">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
-                <p class="font-changing d-block d-md-none">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
-            </div>
-            <div class="col bg-black col-xl-4 col-12">
-                <img class="img-fluid d-block mx-auto" src="moon.jpg" alt="">
-            </div>
-            <div id="infoBtnTwo" class="col my-info-square col-xl-4 col-12 p-4 text-center" onclick="return InfoBtn(this)">
-                <p class="font-changing d-none d-md-block">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
-                <p class="font-changing d-block d-md-none">наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель наполнитель</p>
+    <div id="info" class="my-carousel container-fliud vh-100 d-flex align-items-center justify-content-center flex-wrap">
+        <h1 class="w-100 text-center text-light">об игре</h1>
+        <div id="shards" class="container d-flex align-items-center p-0 mx-auto justify-content-center">
+            <div class="carousel-container row d-flex justify-content-between align-items-center flex-nowrap">
+                <div class="left-shards col-xl-5 d-flex justify-content-between wrap-nowrap align-items-center">
+                    <div class="carousel-element skewed-reverse mx-2 mb-5 edge-skew align-content-center carousel-normal">
+                        <p class="no-transform">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, assumenda?</p>
+                    </div>
+                    <div class="carousel-element skewed mx-2 mt-5 inside-skew align-content-center carousel-normal">
+                        <p class="no-transform-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, assumenda?</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-element carousel-element-center col-xl-2 mx-2 align-content-center">
+                </div>
+
+                <div class="right-shards col-xl-5 d-flex justify-content-between wrap-nowrap align-items-center">
+                    <div class="carousel-element skewed-reverse mx-2 mt-5 inside-skew align-content-center carousel-normal">
+                        <p class="no-transform">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, assumenda?</p>
+                    </div>
+                    <div class="carousel-element skewed mx-2 mb-5 edge-skew align-content-center carousel-normal">
+                        <p class="no-transform-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, assumenda?</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> 
-    <div id="slider" class="my-third-slide container-fluid bg-dark vh-100">
+    </div>
+    <div id="characters" class="my-second-slide-info align-content-center container-fliud vh-100">
+        <h1 class="text-center text-light">персонажи</h1>
+        <div class="my-second-slide-info-contents container d-flex justify-content-between row m-auto text-light mx-auto my-auto h-75">
+            <div class="toModal col my-info-square col-xl-4 col-12">
+            </div>
+            <div class="toModal col my-info-square  col-xl-4 col-12">
+            </div>
+            <div class="toModal col my-info-square col-xl-4 col-12">
+            </div>
+        </div>
+    </div>
+    <div id="slider" class="my-third-slide container-fluid vh-100">
         <div class="w-100 container-fluid">
-            <div class="m-auto bg-danger">
+            <div class="m-auto">
                 <div class="container position-relative">
                     <div class="text-bottom container position-absolute z-2 text-danger">
                         <p class="d-none d-md-block text-center">
@@ -90,65 +129,488 @@
             </div>
         </div>
     </div>
-    <div id="reviews" class="my-fourth-slide container-fluid bg-black vh-100">
-        <div class="container bg-dark h-100 text-center text-light">
-            <div class="reviews-container container bg-black d-flex w-100 h-100 m-auto row position-relative">
-                <h1 class="custom-top-review position-absolute d-none d-xl-block">отзывы</h1>
-                <div class="review p-0 col container col-12 m-auto position-relative">
-                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
-                        <div class="pfp bg-primary"></div>
-                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
-                    </div>
-                    <div class="bottom">
+    <div id="reviews" class="container-fluid vh-100">
+        <div class="container h-100 text-center text-light">
+            <div class="container h-100 d-flex justify-content-center position-relative">
+            <h1 class="custom-top-review position-absolute d-none d-xl-block">отзывы</h1>
+                <div class="my-fourth-slide-reviews reviews-container container d-flex my-auto row position-relative flex-nowrap w-100">
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
                         <div class="gradient-review position-absolute"></div>
-                        <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp1"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">TAHODOGOTER</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        20.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
 
-                            -The Earthmover upon spotting a GoPro™ with wings and four coins
-                            "AAAAAAaaaAAAAA"
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
 
-                            -The Earthmover upon spotting a GoPro™ with wings and four coins
-                            "AAAAAAaaaAAAAA"
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
 
-                            -The Earthmover upon spotting a GoPro™ with wings and four coins
-                            "AAAAAAaaaAAAAA"
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
 
-                            -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
                     </div>
-                </div>
-                <div class="review p-0 col container col-12 m-auto position-relative">
-                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
-                        <div class="pfp bg-primary"></div>
-                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
-                    </div>
-                    <div class="bottom">
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
                         <div class="gradient-review position-absolute"></div>
-                        <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
-                        </p>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp2"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">1000-THR</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        24.03.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        10
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="review p-0 col container col-12 m-auto position-relative">
-                    <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
-                        <div class="pfp bg-primary"></div>
-                        <div class="nickname text-lignt"><p class="pt-3">1000-THR EARTHMOVER</p></div>
-                    </div>
-                    <div class="bottom">
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
                         <div class="gradient-review position-absolute"></div>
-                        <p class="justify-text p-3">
-                            A massive quadrupedal machine made of dark metal, with city lights abound its torso and neck along with a thin rod of mass destruction. Said neck resembles a spine to better allow it to bend and fire.
-                            Internally, it has a massive hollow chamber lined with flesh and filled with boiling blood to purge intruders with several Idols guarding the path up the neck, which contains numerous hot pipes that burn V1, and winds to the head chamber that contains the brain.
-                        </p>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp3"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">Labrnet</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        15.01.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        6
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">
+                                A massive quadrupedal machine made of dark metal, with city lights abound its torso and neck along with a thin rod of mass destruction. Said neck resembles a spine to better allow it to bend and fire.
+                                Internally, it has a massive hollow chamber lined with flesh and filled with boiling blood to purge intruders with several Idols guarding the path up the neck, which contains numerous hot pipes that burn V1, and winds to the head chamber that contains the brain.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp4"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">nuts</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        16.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        3
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp1"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">TAHODOGOTER</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        20.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp2"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">1000-THR</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        24.03.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        10
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp3"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">Labrnet</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        15.01.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        6
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">
+                                A massive quadrupedal machine made of dark metal, with city lights abound its torso and neck along with a thin rod of mass destruction. Said neck resembles a spine to better allow it to bend and fire.
+                                Internally, it has a massive hollow chamber lined with flesh and filled with boiling blood to purge intruders with several Idols guarding the path up the neck, which contains numerous hot pipes that burn V1, and winds to the head chamber that contains the brain.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp4"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">nuts</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        16.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        3
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp1"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">TAHODOGOTER</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        20.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp2"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">1000-THR</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        24.03.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        10
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp3"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">Labrnet</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        15.01.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        6
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">
+                                A massive quadrupedal machine made of dark metal, with city lights abound its torso and neck along with a thin rod of mass destruction. Said neck resembles a spine to better allow it to bend and fire.
+                                Internally, it has a massive hollow chamber lined with flesh and filled with boiling blood to purge intruders with several Idols guarding the path up the neck, which contains numerous hot pipes that burn V1, and winds to the head chamber that contains the brain.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp4"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">nuts</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        16.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        3
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp1"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">TAHODOGOTER</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        20.02.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">"AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins
+                                "AAAAAAaaaAAAAA"
+
+                                -The Earthmover upon spotting a GoPro™ with wings and four coins</p>
+                        </div>
+                    </div>
+                    <div class="review mx-3 p-0 col container col-12 m-auto position-relative">
+                        <div class="gradient-review position-absolute"></div>
+                        <div class="top p-3 align-items-center justify-content-between d-flex wrap-nowrap">
+                            <div class="pfp pfp2"></div>
+                            <div class="pfp-right-side">
+                                <div class="nickname text-lignt">
+                                    <p class="pt-3 text-start"><h2 class="h5">1000-THR</h2></p>
+                                </div>
+                                <div class="rating">
+                                    <span class="date-text text-lignt">
+                                        24.03.2025
+                                    </span>
+                                    <span class="like" onclick="return PressLike(this);">
+                                        10
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="justify-text p-3">The 1000-THR "Earthmover" is a Supreme Machine and the boss fought at the climax of the Violence layer, [ 7-4: ...LIKE ANTENNAS TO HEAVEN ]. Earthmovers are visible throughout most of the Violence layer, with three Earthmovers visible in the distance in [ 7-2: LIGHT UP THE NIGHT ] and a lone Earthmover looming over the forests of [ 7-3: NO SOUND, NO MEMORY ].
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="download" class="my-fifth-slide container-fluid bg-black vh-100">
-        <div class="container h-100 text-center text-light">
-            <h1>скачать</h1>
-                <a class="btn btn-outline-primary d-block text-center text-decoration-none text-light w-100 h-75 m-auto" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F598134394248886689%2F&psig=AOvVaw2kp5kBWDFZdyAh99Lel1Ln&ust=1740529938377000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjr_rbJ3YsDFQAAAAAdAAAAABAE">скачать</a>
+    <div id="download" class="download-slide container vh-100 w-100 mx-auto row d-flex justify-content-between flex-wrap">
+        <div class="col-12 download-col-top"><h1 class="mt-5 text-center text-light">скачать</h1></div>
+        <div class="col-12 download-col-info row d-flex justify-content-between align-items-center mx-auto p-0">
+            <div class="col-xl-4 d-flex flex-wrap justify-content-start p-0">
+                <p class="text-light">Доступно для скачивания на: <br> Widows, Mac, Linux</p><br>
+                <a class="to-download text-light text-decoration-none text-left" href="./wassup.png">СКАЧАТЬ</a>
+            </div>
+            <div class="col-xl-7 wassup"></div>
         </div>
     </div>
-
+    <div class="modal-bg">
+        <div class="modal-body modal-inactive">
+            <div class="modal-window modal-1">
+                <div class="modal-top">
+                    <button class="modal-close-btn">x</button>
+                </div>
+                <div class="modal-middle">
+                    <div class="modal-character-preview d-flex align-items-center">
+                        <img width="100%" src="Images/AboutCharacters/gzhechka.png" alt="">
+                    </div>
+                    <div class="modal-character-description text-light">
+                        <p><h2 class="h4 d-inline">НАЗВАНИЕ: </h2>???</p>
+                        <p><h2 class="h4 d-inline">ДАННЫЕ: </h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p><h2 class="h4 d-inline">ОПИСАНИЕ: </h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, consectetur.</p>
+                    </div>
+                </div>
+                <div class="modal-bottom">
+                    <p class="text-center"><i>bottom text 1</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body modal-inactive">
+            <div class="modal-window modal-2">
+                <div class="modal-top">
+                    <button class="modal-close-btn">x</button>
+                </div>
+                <div class="modal-middle">
+                    <div class="modal-character-preview d-flex align-items-center">
+                        <img width="100%" src="Images/AboutCharacters/farfor.png" alt="">
+                    </div>
+                    <div class="modal-character-description text-light">
+                        <p><h2 class="h4 d-inline">НАЗВАНИЕ: </h2>???</p>
+                        <p><h2 class="h4 d-inline">ДАННЫЕ: </h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p><h2 class="h4 d-inline">ОПИСАНИЕ: </h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, consectetur.</p>
+                    </div>
+                </div>
+                <div class="modal-bottom">
+                    <p class="text-center"><i>bottom text 2</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body modal-inactive">
+            <div class="modal-window modal-3">
+                <div class="modal-top">
+                    <button class="modal-close-btn">x</button>
+                </div>
+                <div class="modal-middle">
+                    <div class="modal-character-preview d-flex align-items-center">
+                        <img width="100%" src="Images/AboutCharacters/janna.png" alt="">
+                    </div>
+                    <div class="modal-character-description text-light">
+                        <p><h2 class="h4 d-inline">НАЗВАНИЕ: </h2>???</p>
+                        <p><h2 class="h4 d-inline">ДАННЫЕ: </h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p><h2 class="h4 d-inline">ОПИСАНИЕ: </h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, consectetur.</p>
+                    </div>
+                </div>
+                <div class="modal-bottom">
+                    <p class="text-center"><i>bottom text 3</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <script src="Bootstrap/js/script.js"></script>
 </body>
