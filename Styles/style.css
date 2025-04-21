@@ -581,6 +581,12 @@ img{
     height: 90%; width: 50%;
     font-family: "Jura", sans-serif;
     font-size: 22px;
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+    @media (max-width: 513px) {
+        font-size: 4vw;
+    }
 }
 .modal-bottom{
     width: 100%;
