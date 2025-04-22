@@ -36,21 +36,23 @@ function PressLike(target){
 }
 
 function checkPosition() {
-    reviews.forEach(rev => {
-    let rect = rev.getBoundingClientRect();
-    
-    if (rect.left < 50 || rect.right > window.innerWidth - 200) {
-        rev.style.opacity = '0.3';
-        rev.style.top = '20px';
-        rev.style.transform = 'scale(0.95)';
+    if(window.innerWidth >= 993){
+        reviews.forEach(rev => {
+            let rect = rev.getBoundingClientRect();
+            
+            if (rect.left < 50 || rect.right > window.innerWidth - 200) {
+                rev.style.opacity = '0.3';
+                rev.style.top = '20px';
+                rev.style.transform = 'scale(0.95)';
+            }
+            else {
+                rev.style.opacity = '1';
+                rev.style.top = '0px';
+                rev.style.transform = 'scale(1)';
+            }
+            })
+        requestAnimationFrame(checkPosition);
     }
-    else {
-        rev.style.opacity = '1';
-        rev.style.top = '0px';
-        rev.style.transform = 'scale(1)';
-    }
-    })
-    requestAnimationFrame(checkPosition);
 }
 
 checkPosition();
